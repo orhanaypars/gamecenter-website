@@ -11,6 +11,7 @@ import {
   UserButton,
 } from "@clerk/nextjs";
 import { Button } from "@/components/ui/button";
+import { DialogTitle } from "@/components/ui/dialog";
 
 function Navbar() {
   const navLinks = [
@@ -101,6 +102,8 @@ function Navbar() {
               side="left"
               className="w-4/5 max-w-xs p-0 bg-blue-900 backdrop-blur-lg border-r-0 shadow-xl"
             >
+              {/* DialogTitle for accessibility */}
+              <DialogTitle className="sr-only">Menü</DialogTitle>
               <div className="h-full flex flex-col">
                 <div className="p-4 border-b border-gray-100">
                   <Link href="/" className="flex items-center space-x-2">
