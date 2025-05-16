@@ -24,8 +24,8 @@ function Navbar() {
       href: "/about",
     },
     {
-      name: "Bakiye Yükle",
-      href: "/balance",
+      name: "Kart İşlemleri",
+      href: "/cardinfo",
     },
     {
       name: "İletişim",
@@ -39,8 +39,8 @@ function Navbar() {
         {/* Logo */}
         <div className="flex items-center">
           <Link href="/" className="flex items-center space-x-2">
-            <span className="text-xl font-bold text-amber-500 hover:text-white">
-              Land of MOA
+            <span className="text-2xl font-bold text-amber-500 hover:text-white">
+              Land of Moa
             </span>
           </Link>
         </div>

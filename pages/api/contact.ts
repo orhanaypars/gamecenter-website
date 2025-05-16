@@ -34,7 +34,7 @@ export default async function handler(
       from: `"Land of MOA" <${
         process.env.EMAIL_USER || "orhanaypars35@gmail.com"
       }>`,
-      to: "orhanaypars35@gmail.com",
+      to: "orhanaypars35@gmail.com", // Tüm iletiler bu adrese gönderiliyor
       replyTo: email,
       subject: `Yeni İletişim Formu Mesajı - ${name}`,
       text: `Ad: ${name}\nE-posta: ${email}\nMesaj: ${message}`,

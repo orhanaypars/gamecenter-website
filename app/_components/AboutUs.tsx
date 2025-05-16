@@ -2,8 +2,10 @@
 
 import React from "react";
 import Image from "next/image";
+import Link from "next/link";
 import { motion } from "framer-motion";
 import { Star, Heart, Award, Shield } from "lucide-react";
+import { Button } from "@/components/ui/button";
 
 const galleryImages = [
   {
@@ -237,9 +239,11 @@ const AboutUs = () => {
             Çocuğunuzun eğlenceli ve güvenli bir ortamda vakit geçirmesini
             sağlayın.
           </p>
-          <button className="bg-amber-500 hover:bg-amber-600 text-white font-semibold py-3 px-8 rounded-full transition-all duration-300 transform hover:scale-105">
-            Hemen İletişime Geçin
-          </button>
+          <Link href="/contact">
+            <Button className="bg-amber-500 hover:bg-amber-600 text-white font-semibold py-3 px-8 rounded-full transition-all duration-300 transform hover:scale-105">
+              Hemen İletişime Geçin
+            </Button>
+          </Link>
         </motion.div>
       </div>
     </section>
