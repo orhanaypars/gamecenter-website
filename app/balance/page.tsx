@@ -8,6 +8,7 @@ import {
   useStripe,
   useElements,
 } from "@stripe/react-stripe-js";
+import Link from "next/link";
 
 const stripePublishableKey =
   "pk_test_51ROruHBeEQ1d7k8c9hKPtJ6fheiegXkcjlhGLR8LnojmhozGtSj9ohgMKrRTxdikCHOwb0UcGewjcMhqoCIBUlpG00OsfmL28E";
@@ -189,8 +190,23 @@ function BalanceForm() {
             letterSpacing: 1,
           }}
         >
-          {loading ? "Yükleniyor..." : "Bakiye Yükle"}
+          {loading ? "Yükleniyor..." : "Bakiye yükle"}
         </button>
+        <Link href="/balancehistory">
+          <button
+            type="submit"
+            disabled={!stripe || loading}
+            className="w-full py-3 px-6 rounded-xl font-bold text-lg shadow-lg transition-all duration-200 disabled:opacity-50"
+            style={{
+              background: "linear-gradient(90deg, #2563eb 0%, #fbbf24 100%)",
+              color: "#fff",
+              fontWeight: 800,
+              letterSpacing: 1,
+            }}
+          >
+            {loading ? "Yükleniyor..." : "Bakiye geçmişi"}
+          </button>
+        </Link>
         {message && (
           <div
             className="text-center text-base mt-2 font-semibold"
